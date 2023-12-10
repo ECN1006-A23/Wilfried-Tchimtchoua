@@ -15,19 +15,19 @@
         padding: 0;
       }
       body {
-        background-image: url("https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-        font-family: "Eczar", serif;
+        background-image: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 100%;
         background-attachment: fixed;
+        font-family: "Eczar", serif;
         margin: 0;
         padding: 0;
       }
 
       h1 {
         font-family: "Caveat", cursive;
-        color: rgb(255, 246, 240);
+        color: white;
         font-size: 50px;
         text-align: center;
         border: 2px solid #640518;
@@ -35,18 +35,20 @@
         text-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
         padding: 5px;
         margin: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
       }
 
       p {
-        margin: 20px;
+        margin: 10%;
         text-align: justify;
-        color: azure;
+        color: white;
       }
 
       button {
         display: block;
         margin: 20px auto;
-        color: black;
+        color: #ff6550;
         font-size: 30px;
         background: whitesmoke;
         padding: 15px 20px;
@@ -58,9 +60,8 @@
 
       img {
         display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
+        margin: auto;
+        width: 50%;
       }
 
       ul {
@@ -70,6 +71,11 @@
   </head>
   <body>
     <h1>Les Enjeux de la Pratique de l'écriture numerique</h1>
+    <br /><br />
+    <img
+      src="https://images.unsplash.com/photo-1637664067109-a6a00840d894?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="julien Tromeur-unsplash"
+    />
     <p class="paragraphe1">
       La pratique de l`écriture numérique est à la fois une opportunité et un
       défi pour notre société moderne. Elle a révolutionné la manière dont nous
@@ -104,9 +110,11 @@
       de travailler collectivement à des solutions qui favorisent une
       utilisation responsable et éclairée de l'écriture numérique
     </p>
-    <!-- ... (your other content) ... -->
-    <img src="Image 1.jpg" alt="Andrew-Neel-unsplash" />
-    <button type="button">Cliquez ici</button>
+    <img
+      src="https://images.unsplash.com/photo-1642059893618-22daf30e92a2?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="Ales Nesetril-unsplash"
+    />
+    <button onclick="DemandeFeedback()">Cliquez ICI</button>
     <hr />
     <ul>
       <li>
@@ -138,33 +146,26 @@
           >https://doi.org/10.4000/edc.3378</a
         >
       </li>
-      <!-- ... (your list items) ... -->
     </ul>
 
     <script>
       function DemandeFeedback() {
         let choix = prompt(
-          "Nous vous remercions d'avoir visité notre page,voulez-vous nous laisser vos impressions ?:" <
-            br >
-            "1-OUI avec plaisir" <
-            br >
-            "2-NON merci"
+          "Nous vous remercions d'avoir visité notre page, voulez-vous nous laisser vos impressions ?\n1-OUI avec plaisir\n2-NON merci"
         );
-        /*let age = prompt("Quel age as-tu ?");*/
-        if (choix === 1) {
-          Nom_prénom = prompt("Entrez votre nom(s) et prénom(s)");
-          Feedback = prompt("Qu'avez-vous retenu de votre lecture ?");
+
+        if (choix === "1") {
+          let Nom_prenom = prompt("Entrez votre nom(s) et prénom(s)");
+          let feedback = prompt("Qu'avez-vous retenu de votre lecture ?");
           alert(
-            "Merci pour votre feedback, il nous sera tres utile pour continuer de nous ameliorer"
+            "Merci pour votre feedback, il nous sera très utile pour continuer de nous améliorer"
           );
-        } else if (choix === 2) {
-          prompt("Merci pour votre visite et à la prochaine !");
+        } else if (choix === "2") {
+          alert("Merci pour votre visite et à la prochaine !");
         } else {
           alert("Vous devez choisir entre 1 et 2");
         }
       }
-      let Clique = document.querySelector("button");
-      Clique.addEventListener("click", DemandeFeedback);
     </script>
   </body>
 </html>
